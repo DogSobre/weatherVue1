@@ -9,12 +9,22 @@
 </template>
 
 <style>
+html{
+  --main-bg-color: #646464;
+  --text-bg-color: #53c3ff;
+  --clik-bg-color: #42b983;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--main-bg-color);
+  font-family: -webkit-font-smoothing,monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-bg-color);
+}
+
+html{
+  background-color: var(--main-bg-color);
 }
 
 #nav {
@@ -23,10 +33,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--clik-bg-color);
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: var(--clik-bg-color);
 }
 </style>
