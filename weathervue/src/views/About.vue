@@ -38,8 +38,7 @@ export default {
   filters: {
     convertToDate(value) {
       const date = new Date(value * 1000);
-      const formattedTime = date.getUTCHours();
-      return formattedTime;
+      return date.getUTCHours();
     },
   },
   asyncComputed: {
@@ -48,8 +47,8 @@ export default {
         return axios.get('https://api.openweathermap.org/data/2.5/weather', {
           params: {
             q: this.nameQuery,
-            appid: 'd77e7612b116338a932892eae146d11c'
-          }
+            appid: 'd77e7612b116338a932892eae146d11c',
+          },
         })
           .then((response) => response.data);
       },
