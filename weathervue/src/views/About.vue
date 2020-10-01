@@ -1,7 +1,13 @@
 <template>
   <div class="about">
     <h1>Welcome to METEO ISRAEL</h1>
-    <input @keypress.enter="setStoreValue('setCity', cityInput)" v-model="cityInput">
+    <div class="flexbox">
+      <div class="search">
+        <div>
+          <input type="text" placeholder="ville . . ." required>
+        </div>
+      </div>
+    </div>
     <!-- <p> {{ githubData.dt | moment("LLLL") }} </p> -->
     <p class="ml2">{{ cityData.name }}
       {{ cityData.dt | moment("LLLL") }}
