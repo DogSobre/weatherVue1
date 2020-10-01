@@ -1,8 +1,13 @@
 <template>
   <div class="about">
     <link rel="stylesheet" href="src/assets/style.css">
-    <h1>This is an about page</h1>
-    <input @keypress.enter="setCity" v-model="tempcity">
+    <h1>METEO</h1>
+    <form action="" class="search-bar">
+      <input @keypress.enter="setCity" v-model="tempcity" type="search" name="search" pattern=".*\S.*" required>
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </form>
     <p class="ml3"> {{ githubData.dt | moment("LLLL") }} </p>
   </div>
 </template>
