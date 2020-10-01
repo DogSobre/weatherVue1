@@ -1,10 +1,16 @@
 <template>
   <div class="about">
     <h1>Welcome to METEO ISRAEL</h1>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
     <div class="flexbox">
       <div class="search">
         <div>
-          <input type="text" placeholder="ville . . ." required>
+          <form>
+            <input type="texte" placeholder="ville . . ." required>
+            <i class="fa fa-search"></i>
+          </form>
         </div>
       </div>
     </div>
