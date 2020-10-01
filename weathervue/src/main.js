@@ -10,10 +10,16 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+/* const moment = require('moment'),
+require('moment/locale/fr'),
+Vue.use(require('vue-moment'), {
+  moment;
+}), */
+
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(AsyncComputed);
 Vue.use(VueMoment);
+Vue.use(AsyncComputed);
 Vue.config.productionTip = false;
 
 new Vue({
