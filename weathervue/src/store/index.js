@@ -2,9 +2,10 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
+
 export default new Vuex.Store({
   state: {
-    city: 'Amiens',
+    city: '',
   },
   mutations: {
     setCity(state, value) {
@@ -14,5 +15,8 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+  },
+  getters: {
+    city: (state) => state.city,
   },
 });
