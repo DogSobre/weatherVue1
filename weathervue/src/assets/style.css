@@ -42,6 +42,12 @@ p.ml2{
     color: #fff6a9;
 }
 
+li{
+    color: #fff6a9;
+    font-size: 20px;
+    list-style: none;
+}
+
 
 
 
@@ -163,4 +169,8 @@ form:hover input {
 form .fa:hover{
     background: #07051a;
     color: white;
+}
+
+#nav a.router-link-exact-active{
+    color: #f877e2;
 }

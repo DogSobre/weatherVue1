@@ -1,24 +1,28 @@
 <template>
   <div class="about">
-    <h1>Welcome to METEO ISRAEL</h1>
+    <h1> WeatherBNB</h1>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
           crossorigin="anonymous">
     <div class="flexbox">
       <div class="search">
-          <form>
         <div>
-            <input type="texte" placeholder="ville . . ." required>
+          <form>
+            <input type="texte" placeholder="ville . . ."
+                   required
+                   @keypress.enter="setStoreValue('setCity', cityInput),
+                   getThings()" v-model="cityInput">
             <i class="fa fa-search"></i>
           </form>
       </div>
         </div>
     </div>
     <!-- <p> {{ githubData.dt | moment("LLLL") }} </p> -->
-    <p class="ml2">{{ cityData.name }}
-      {{ cityData.dt | moment("LLLL") }}
-      {{ cityData.main.temp | displayTemp(cityData.main.temp) }}°C
-      {{ cityData.weather[0].description }}</p>
+    <ul>
+      <li v-for="city in cities" :key="city">
+        {{ city[0] }} <img :src="'http://openweathermap.org/img/wn/' + city[1] + '@2x.png'">
+      </li>
+    </ul>
   </div>
 </template>
 
