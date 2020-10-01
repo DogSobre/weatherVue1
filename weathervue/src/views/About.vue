@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="src/assets/style.css">
     <h1>This is an about page</h1>
     <input @keypress.enter="setCity" v-model="tempcity">
-    <p> {{ githubData.dt | moment("LLLL") }} </p>
+    <p class="ml3"> {{ githubData.dt | moment("LLLL") }} </p>
   </div>
 </template>
 <style src="../assets/style.css"></style>

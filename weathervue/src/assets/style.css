@@ -1,13 +1,12 @@
 html {
     --main-bg-color: #ffef87;
-    --text-bg-color: #ff7600;
+    --text-bg-color: #4e4e4e;
     --clik-bg-color: #ffdd62;
     --font-var : "-webkit-font-smoothing, monospace;"
 }
 
 #app {
-    background-repeat:repeat;
-    background-image:url(../assets/74afc4075f361e228a89787a4a1d0fc6.gif);
+    background-repeat:no-repeat;
     font-family: -webkit-font-smoothing, monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -16,8 +15,9 @@ html {
 }
 
 body {
-    background-repeat:no-repeat;
-    background-image:url(../assets/74afc4075f361e228a89787a4a1d0fc6.gif);
+    background-repeat: initial;
+    background-size: 100%;
+    background-image:url(../assets/1521499038_tumblr_oenzm7yVno1vdlf47o1_1280.gif);
 }
 
 #nav {
@@ -37,11 +37,54 @@ input{
     border-radius: 10px;
     background-color: var(--text-bg-color);
     font-family: -webkit-font-smoothing, monospace;
+    color: #fff6a9;
+}
+p font {
+    font-size: 40px;
+    color: #fff6a9;
 }
 
-p font{
+
+
+
+
+
+
+
+h1 {
+    font-size: calc(10px + 8vh);
+    line-height: calc(10px + 10vh);
+    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+      color: #fccaff; */
+    text-shadow: 0 0 5px #9d00ff, 0 0 15px #9d00ff, 0 0 20px #9d00ff, 0 0 40px #9d00ff, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
     font-family: -webkit-font-smoothing, monospace;
-    background-color: var(--clik-bg-color);
-    color: #000000;
-    font-size: 30px;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        /*     color: #fccaff;
+            text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+              0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+        text-shadow: 0 0 5px #9d00ff, 0 0 15px #9d00ff, 0 0 20px #9d00ff, 0 0 40px #9d00ff, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
 }
