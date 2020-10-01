@@ -3,7 +3,6 @@
     <div id="nav">
       <router-link to="/about">Meteo</router-link> |
       <router-link to="/">Home</router-link>
-
     </div>
     <router-view/>
   </div>
