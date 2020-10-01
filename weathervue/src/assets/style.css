@@ -11,7 +11,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: var(--text-bg-color);
 }
 
 body {
@@ -32,14 +31,13 @@ body {
 #nav a.router-link-exact-active {
     color: var(--clik-bg-color);
 }
-input{
-    font-size: 50px;
-    border-radius: 10px;
-    background-color: var(--text-bg-color);
-    font-family: -webkit-font-smoothing, monospace;
-    color: #000000;
-}
+
 p font {
+    font-size: 40px;
+    color: #fff6a9;
+}
+
+p.ml2{
     font-size: 40px;
     color: #fff6a9;
 }
@@ -69,7 +67,6 @@ h1 {
     20%,
     24%,
     55% {
-        color: #111;
         text-shadow: none;
     }
 
@@ -91,104 +88,79 @@ h1 {
 
 
 
-* {
-    border: 0;
+
+
+
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: #000000;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    border-radius: 30px;
+    border: 4px solid #000000;
+    padding: 5px;
 }
-:root {
-    font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+form :focus{
+    position: absolute;
+    transition: all 1s;
+    width: 100%;;
+    height: 110px;
+    background: #000000;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 0 solid #000000;
+    padding: 5px;
 }
 
-.search-bar input,
-.search-btn,
-.search-btn:before,
-.search-btn:after {
-    transition: all 0.25s ease-out;
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 50px;
+    line-height: 40px;
+    outline: 0;
+    display: none;
+    border: 0;
+    font-size: 1em;
+    border-radius: 30px;
+    padding: 0 30px;
 }
-.search-bar input,
-.search-btn {
-    width: 3em;
-    height: 3em;
+
+input:focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    line-height: 40px;
+    outline: 60px;
+    border: 60px black;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 30px;
+    display: block;
+    width: 210px;
+    background: #07051a;
+    color: white;
 }
-.search-bar input:invalid:not(:focus),
-.search-btn {
+
+
+form:hover{
+    width: 210px;
     cursor: pointer;
 }
-.search-bar,
-.search-bar input:focus,
-.search-bar input:valid  {
-    width: 100%;
-}
-.search-bar input:focus,
-.search-bar input:not(:focus) + .search-btn:focus {
-    outline: transparent;
-}
-.search-bar {
-    margin: auto;
-    padding: 1.5em;
-    justify-content: center;
-    max-width: 30em;
-}
-.search-bar input {
-    background: transparent;
-    border-radius: 1.5em;
-    box-shadow: 0 0 0 0.4em #ffffff inset;
-    padding: 0.75em;
-    transform: translate(0.5em,0.5em) scale(0.5);
-    transform-origin: 100% 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.search-bar input::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-.search-bar input:focus,
-.search-bar input:valid {
-    background: #fff;
-    border-radius: 0.375em ;
-    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
-    transform: scale(1);
-}
-.search-btn {
-    background: #ffffff;
-    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
-    padding: 0.75em;
-    position: relative;
-    transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
-    transform-origin: 0 50%;
-}
-.search-btn:before,
-.search-btn:after {
-    content: "";
+
+form:hover input {
     display: block;
-    opacity: 0;
-    position: absolute;
-}
-.search-btn:before {
-    border-radius: 50%;
-    box-shadow: 0 0 0 0.2em #f1f1f1 inset;
-    top: 0.75em;
-    left: 0.75em;
-    width: 1.2em;
-    height: 1.2em;
-}
-.search-btn:after {
-    background: #f1f1f1;
-    border-radius: 0 0.25em 0.25em 0;
-    top: 51%;
-    left: 51%;
-    width: 0.75em;
-    height: 0.25em;
-    transform: translate(0.2em,0) rotate(45deg);
-    transform-origin: 0 50%;
-}
-.search-btn span {
-    display: inline-block;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
 }
 
+form .fa:hover{
+    background: #07051a;
+    color: white;
+}

@@ -1,14 +1,25 @@
 <template>
-<div class="about">
-  <h1>This is an about page</h1>
-  <input @keypress.enter="setStoreValue('setCity', cityInput), getThings()" v-model="cityInput">
-  <!-- <p> {{ githubData.dt | moment("LLLL") }} </p> -->
-  <ul>
-    <li v-for="city in cities" :key="city">
-      {{ city[0] }} <img :src="'http://openweathermap.org/img/wn/' + city[1] + '@2x.png'">
-    </li>
-  </ul>
-</div>
+  <div class="about">
+    <h1>Welcome to METEO ISRAEL</h1>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+    <div class="flexbox">
+      <div class="search">
+          <form>
+        <div>
+            <input type="texte" placeholder="ville . . ." required>
+            <i class="fa fa-search"></i>
+          </form>
+      </div>
+        </div>
+    </div>
+    <!-- <p> {{ githubData.dt | moment("LLLL") }} </p> -->
+    <p class="ml2">{{ cityData.name }}
+      {{ cityData.dt | moment("LLLL") }}
+      {{ cityData.main.temp | displayTemp(cityData.main.temp) }}°C
+      {{ cityData.weather[0].description }}</p>
+  </div>
 </template>
 
 <script>
