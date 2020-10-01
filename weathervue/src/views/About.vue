@@ -3,12 +3,15 @@
     <link rel="stylesheet" href="src/assets/style.css">
     <h1>METEO</h1>
     <form action="" class="search-bar">
-      <input @keypress.enter="setCity" v-model="tempcity" type="search" name="search" pattern=".*\S.*" required>
+      <label>
+        <input @keypress.enter="setCity"
+               v-model="tempcity" type="search" name="search" pattern=".*\S.*" required>
+      </label>
       <button class="search-btn" type="submit">
         <span>Search</span>
       </button>
     </form>
-    <p class="ml3"> {{ githubData.dt | moment("LLLL") }} </p>
+    <p class="ml3"> {{ githubData.dt | moment('LLLL') }} </p>
   </div>
 </template>
 <style src="../assets/style.css"></style>
@@ -42,7 +45,13 @@ export default {
   asyncComputed: {
     githubData: {
       get() {
-        return axios.get('https://api.openweathermap.org/data/2.5/weather', { params: { q: this.nameQuery, appid: 'd77e7612b116338a932892eae146d11c' } }).then((response) => response.data);
+        return axios.get('https://api.openweathermap.org/data/2.5/weather', {
+          params: {
+            q: this.nameQuery,
+            appid: 'd77e7612b116338a932892eae146d11c'
+          }
+        })
+          .then((response) => response.data);
       },
       default() {
         return 'Loading';
