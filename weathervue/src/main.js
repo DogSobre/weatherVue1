@@ -1,6 +1,7 @@
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import '../src/assets/style.css';
 
 import AsyncComputed from 'vue-async-computed';
 import VueMoment from 'vue-moment';

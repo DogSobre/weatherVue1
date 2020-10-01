@@ -3,7 +3,7 @@
     <h1>Welcome to METEO ISRAEL</h1>
     <input @keypress.enter="setStoreValue('setCity', cityInput)" v-model="cityInput">
     <!-- <p> {{ githubData.dt | moment("LLLL") }} </p> -->
-    <p>{{ cityData.name }}
+    <p class="ml2">{{ cityData.name }}
       {{ cityData.dt | moment("LLLL") }}
       {{ cityData.main.temp | displayTemp(cityData.main.temp) }}°C
       {{ cityData.weather[0].description }}</p>
