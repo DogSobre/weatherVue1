@@ -1,0 +1,47 @@
+html {
+    --main-bg-color: #ffef87;
+    --text-bg-color: #ff7600;
+    --clik-bg-color: #ffdd62;
+    --font-var : "-webkit-font-smoothing, monospace;"
+}
+
+#app {
+    background-repeat:repeat;
+    background-image:url(../assets/74afc4075f361e228a89787a4a1d0fc6.gif);
+    font-family: -webkit-font-smoothing, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--text-bg-color);
+}
+
+body {
+    background-repeat:no-repeat;
+    background-image:url(../assets/74afc4075f361e228a89787a4a1d0fc6.gif);
+}
+
+#nav {
+    padding: 30px;
+}
+
+#nav a {
+    font-weight: bold;
+    color: var(--clik-bg-color);
+}
+
+#nav a.router-link-exact-active {
+    color: var(--clik-bg-color);
+}
+input{
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: var(--text-bg-color);
+    font-family: -webkit-font-smoothing, monospace;
+}
+
+p font{
+    font-family: -webkit-font-smoothing, monospace;
+    background-color: var(--clik-bg-color);
+    color: #000000;
+    font-size: 30px;
+}
